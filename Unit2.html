@@ -39,13 +39,34 @@
 						<!-- Unit 1 learnings -->
 							<section class="post">
 								<header class="major">
-									<span class="date">15 March 2022 ~ 21 March 2022</span>
+									<span class="date">24 October 2022 ~ 28 October 2022</span>
 									<h2>Unit 2 learnings</h2>
 								</header>
 							
 							<!-- Section 1 - Unit Learnings -->
-							<p>Unit 2 continued our discussion with the addition of peer reviews to the original posts. This gave students the opportunity to exchange ideas.<p>
-								<p>Seminar 1 was also held and focussed on Industry 4.0, the Internet of things, and big data. Industry 4.0 has always been a passion for me, having come from an automation and control field and designing manyu plants to have expandability for Industry 4.0. I have included an interesting link below to the history and future of Industry 4.0<br /><p>
+							<p>The following e-portfolio page will focus on Jaccard Coefficient<p>
+								<p>The Jaccard coefficient or similarity index is a simple measure used to show the similarity between data samples in two sets of data. Jaccard coefficient is commonly used int he following contexts:<p>
+								<p>	- Text Mining<br />
+								      Finding similarities between two text documents<p>
+									 
+								<p>	- E-Commerce:<br />
+									  Finding similar customers based on their purchase ihstory<p>
+									  
+								<p> - Recommendation system:<br />
+									  Finding similar customers based on ratings and reviews (movie/product recommendations)<p>
+							<p>The Jaccard coefficient value ranges from 0 to 1. The higher the number, the more similar the data is with each other. This can be displayed in the below symbolic form:<br />
+							J(A, B) = |A ∩ B| / |A U B| = |A ∩ B| / |A| + |B| - |A ∩ B|<br /><br />
+							
+							J = (Count of COMMON ELEMENTS in BOTH sets)/(Count of elements in FIRST set + count of elements in SECOND set - count of COMMON elements in both sets). For the example given in Units 5:<br /><p>
+							<span class="image fit"><img src="images/Jaccard_EX.jpg" alt="" /></span>
+
+							<p>J(Jack, Mary) = (5/(6+6-5) = 0.71<br />
+							   J(Jack, Jim) = (6/6+6-6) = 1<br />
+							   J(Jim, Mary) = (5/6+6-5) = 0.71<br /><p>
+							   
+							<p>Unit 5 also introduces K means clustering and the pre-processing of data to input into the algorithm. Important steps noted are clipping outliers. For this task we used the IQR rule, which
+							is calculated as +-1.5*IQR. Secondly eliminating missing values. In our assignment example this was done by substituting the mean value for missing values. Thirdly, K means uses euclidean distance to measure
+							centroid distances. Therefore categorical features must be encoded prior to running them through the K means algorithm. This as done using the scikit learn ordinal encoder.
 
 							<!-- Featured Post -->
 								<article class="post featured">
