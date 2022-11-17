@@ -39,27 +39,33 @@
 						<!-- Unit 1 learnings -->
 							<section class="post">
 								<header class="major">
-									<span class="date">22 March 2022 ~ 28 March 2022</span>
-									<h2>Unit 3 learnings</h2>
+									<span class="date">31 October 2022 ~ 04 Novemeber 2022</span>
+									<h2>Unit 8 learnings</h2>
 								</header>
 							
 							<!-- Section 1 - Unit Learnings -->
-							<p>In Unit 3, the final summary of the discussion on Artificial Intelligence was posted by all students. Many of my peers agreed that AI in the long run will prove to be a source of insight, and change the way humans work with big data. My summary post discussed potential improvements AI will bring, and the need for humans to move to more complex roles once AI replaces repetetive tasks:<br /><p>
-							<p>Summary Post:<br /><br />Many very good discussion points have been raised by my colleagues which encompass a wide variety of uses from detection of human emotion to automated drones.<br /><br />
-							While some uses for AI are low risk, such as in chatbots, some uses are of much higher risk, such as control systems on autonomous vehicles (Semmler & Rose, 2017) or AI algorithms used to detect human disease. Currently, there are no widely adopted laws governing liability of these systems if they generate harm (Kaplan & Haenlein, 2109). In 2018 an autonomous vehicle fatally collided with a cyclist in Arizona, Tuscon, which resulted in Uber having to suspend all further testing of these vehicles (Wakabayashi, 2018).<br /><br />
-							Following on the above, (Leslie, 2019) give a project execution plan and state that that the model should be explicable, meaning there should be an explainable account of the rationale behind each specific outcome.<br /><br />
-							In our discussion group another consideration of interest was biased outputs of the system. (Ellahham, 2109) shows how AI reciprocates training data and can adopt biases in the training data through to the operational dataset, even if unintentional.<br /><br />
-							A further consideration mentioned in our discussions is security of these systems if confronted with adversarial attack (Leslie, 2019). This could be to expose sensitive private information, or to poison the data the AI systems ingests, to unknowingly result in undesirable reinforcement learning behavior.<br /><br />
-							Finally, many discussion points have been made on job displacement. Opinions vary on the subject, but consensus amongst academics holds that AI will lead to job enhancement rather than job displacement (Kaplan & Haenlein, 2109), though I strongly believe there will be an initial period of job displacement as humans learn to assume more complex roles.<br /><br />
-							In conclusion, there is much investment in AI due to the opportunities AI presents for economic development currently. As cited in (West & Allen, 2018), a report from PriceWaterhouseCoopers estimates a 14% or $15.7 trillion increase in global GDP by 2030 from the adoption of AI technologies. With uses in fields such as transportation, criminal justice, online security, chatbots, and health care to name a few, it is certainly an interesting time to be involved with AI.<br /><br />
-							References:<br /><br />
-							Cellan-Jones, R., 2020. <i>Uber's self-driving operator charged over fatal crash.</i> [Online] Available at: <u>https://www.bbc.com/news/technology-54175359</u> [Accessed 24 03 2022].<br /><br />
-							Ellahham, S., 2109. Application of Artificial Intelligence in the Health Care Safety Context: Opportunities and Challenges. <i>American Journal of Medical Quality,</i> 00(0), pp. 2-8.<br /><br />
-							Kaplan, A. & Haenlein, M., 2109. Rulers of the world, unite! The challenges and opportunities of artificial intelligence. <i>Business Horizons,</i> 63(1), pp. 37-50.<br /><br />
-							Leslie, D., 2019. <i>Understanding artificial intelligence ethics and safety: A guide for the responsible design and implementation of AI systems in the public sector.</i> s.l.:s.n.<br /><br />
-							Semmler, S. & Rose, Z., 2017. Artificial intelligence: Application today and implications tomorro. <i>Duke L. & Tech,</i> Volume 16, p. 85.<br /><br />
-							Wakabayashi, D., 2018. Self-Driving Uber Car Kills Pedestrian in Arizona, <i>Where Robots Roam.</i> [Online] Available at: <u>https://www.nytimes.com/2018/03/19/technology/uber-driverless-fatality.html</u> [Accessed 24 03 2022].<br /><br />
-							West, D. & Allen, J. R., 2018. <i>How artificial intelligence is transforming the world.</i> [Online] Available at: <u>https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/</u> [Accessed 23 03 2022]. <br /><br /><p>
+							<p>many great learnings were contained in Unit 8, such as:<br />
+							- Error in ANN's<br />
+							- Gradient Descent<br />
+							- Derivative functions<br />
+							- Bias<br /><p>
+							
+							<h2>Gradient descent</h2>
+							<p>Gradient descent is an iterative optimisation algorithm used to find the minimum of a function. In the case of machine learning systems, we would like to minimise the error function. For this, the local mimima can be found by
+							moving the variable value in steps and iteratively calculate the MSE (Mean squared error).<p>
+							
+							<span class="image fit"><img src="images/GradDescent.jpg" alt="" /></span>
+							
+							<p>As seen in the figure above, the slope of the function begins with a slow changing slope(toward the y-axis), and as the function gets closer to the local minima, the slope of the line changes. The learning rate
+							controls the step size for the iterative process. A small learning rate results in many iterations, but a more accurate minimum value.<br />
+							
+							The following diagram (Kwaitkowski R, 2021) shows different learning rates applied to a quadratic function [f(x) = x(exp2)-4x+1]. Learning rate 0.1, 0.3 0.8 and 0.9 are chosen, with their results. The 
+							best response is seen with 0.1 as a learning rate, although this will iterate more cycles. Higher learning rates can cause some jumping around the curve before the minima is reached.<br />							
+							<span class="image fit"><img src="images/Learningrate.jpg" alt="" /></span>
+							
+							
+							
+							<p>
 
 							<!-- Featured Post-->
 							<article class="post featured 1">
