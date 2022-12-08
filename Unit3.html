@@ -74,12 +74,42 @@
 							- One or more hidden layers form the processing stage of the model. Each neuron in the hidden layers contains an activation function calulated from the outputs of the previous neuron and weight<br /><p>
 							<span class="image fit"><img src="images/ActivationCalc.jpg" alt="" /></span>
 							<p><i> Activation function calculation, (University of Essex, 2022)</i><p>
-							<p>- The output layer processes the information from the hidden layer and generates an output<br />
+							<p>- The output layer processes the information from the hidden layer and generates an output<br /><br />
+							
+							<h2>Error - Loss function</h2>
+							<span class="image fit"><img src="images/ErrorLossFunction.jpg" alt="" /></span>
+							<p><i> Simple calculation of error (loss) function, (University of Essex, 2022)</i><p>
+							
+							The above extract from the University of Essex lecturcast provides the simplest explanation of the error or loss function, which is the actual class minus the prediction. The below items can be
+							implemented to lower error:<br /><br />
+							1. Increase the model size<br />
+							  The model should have enough parameters in the input data to learn, and provide predictions. A richer training dataset, or more data may prove useful to lessen error. This has its limits as
+							  data is expensive to procure.<br /><br />
+							
+							2. Allow more Features<br />
+							  This means ensuring hyper-parameters are set in such a manner so as to allow the most features to pass through the network. These are for instance high filter values, or lower strides in each iteration.<br /><br />
+							  
+							3. Avoid Local Minimum<br />
+							  A local minimum is a source of high error. A neural network can be re-trained with different initial values to avoid it getting stuck on a local minimum. Also, gradient descent can be added to provide momentum 
+							  to the gradient descent algorithm.<br /><br />
+							  
+							4. Network Architecture<br />
+							  Network architecture can also cause high error as we have seen in our assessment 2. Better network architectures can be used to provide better trade off between loss and accuracy.<br /><br />
+							  
+							5. Add Regularization<br />
+							  L1 or L2 regularizzation is a methodproven technique to reduce overfitting of the model. Regularization holds each parameter closer to zero, ensuring no parameter is allowed to learn too much, and other parameters
+							  too little.<br /><br />
+							  
+							
 							
 							One of the biggest issues which is faced with Artificial neural networks is explainability of the model. (Kubat, 2017) show the "black box" approach of ANN's and show the struggle to convince physicians
 							to accept and act on advice from an ANN based computer system as much as a patient would agree wit hmajor surgery based solely on the output of a computer program. (Kubat, 2017) goes on to note that
-							machine learning algorithms should exist only to offer advice, with the final decision being the responsibility of humans. Machine learning can however alert, for instance doctors to previously unsusoected problems and
-							recommend additional laboratory or physical testing.<p>
+							machine learning algorithms should exist only to offer advice, with the final decision being the responsibility of humans. Machine learning can however alert, for instance doctors to previously unsuspected problems and
+							recommend additional laboratory or physical testing.
+							
+							
+							
+							
 							
 							
 							</section>
