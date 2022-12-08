@@ -45,7 +45,7 @@
 							
 							<!-- Section 1 - Unit Learnings -->
 							<p>many great learnings were contained in Unit 8, such as:<br />
-							- Error in ANN's<br />
+							- Structure of ANN<br />
 							- Gradient Descent<br />
 							- Derivative functions<br />
 							- Bias<br /><p>
@@ -57,28 +57,31 @@
 							<span class="image fit"><img src="images/GradDescent.jpg" alt="" /></span>
 							
 							<p>As seen in the figure above, the slope of the function begins with a slow changing slope(toward the y-axis), and as the function gets closer to the local minima, the slope of the line changes. The learning rate
-							controls the step size for the iterative process. A small learning rate results in many iterations, but a more accurate minimum value.<br />
+							controls the step size for the iterative process. A small learning rate results in many iterations, but a more accurate minimum value.<br /><br />
 							
 							The following diagram (Kwaitkowski R, 2021) shows different learning rates applied to a quadratic function [f(x) = x(exp2)-4x+1]. Learning rate 0.1, 0.3 0.8 and 0.9 are chosen, with their results. The 
-							best response is seen with 0.1 as a learning rate, although this will iterate more cycles. Higher learning rates can cause some jumping around the curve before the minima is reached.<br />							
+							best response is seen with 0.1 as a learning rate, although this will iterate more cycles. Higher learning rates can cause some jumping around the curve before the minima is reached.<br /><p>
 							<span class="image fit"><img src="images/Learningrate.jpg" alt="" /></span>
 							
+							<h2>Structure of Artificial neural network</h2>
+							
+							<span class="image left"><img src="images/ANNStructure.jpg" alt="" /></span>
+							<p><i> ANN structure, (Walczak &Cerpa, 2003)</i><p>
+							
+							<p>Artificial neural networks emulate the human nervous system and use a set of reduced concepts from biological neural systems. The structure above shows the main lements of the network:<br />
+							- The input layer where signals are passed to the network<br />
+							- Interconnentions between layers and neurons which are weights set on forward propagation and updated on backpropagation<br />
+							- One or more hidden layers form the processing stage of the model. Each neuron in the hidden layers contains an activation function calulated from the outputs of the previous neuron and weight<br /><p>
+							<span class="image left"><img src="images/ActivationCalc.jpg" alt="" /></span>
+							<p><i> Activation function calculation, (University of Essex, 2022)</i><p>
+							<p>- The output layer processes the information from the hidden layer and generates an output<br />
+							
+							One of the biggest issues which is faced with Artificial neural networks is explainability of the model. (Kubat, 2017) show the "black box" approach of ANN's and show the struggle to convince physicians
+							to accept and act on advice from an ANN based computer system as much as a patient would agree wit hmajor surgery based solely on the output of a computer program. (Kubat, 2017) goes on to note that
+							machine learning algorithms should exist only to offer advice, with the final decision being the responsibility of humans. Machine learning can however alert, for instance doctors to previously unsusoected problems and
+							recommend additional laboratory or physical testing.<p>
 							
 							
-							<p>
-
-							<!-- Featured Post-->
-							<article class="post featured 1">
-								<header class="major">
-									<span class="date">September 16, 2020</span>
-									<h2>Uber self driving car fatal accident</a></h2>
-									<p>A very interesting article on Uber self driving car and the hazards of full autonomous systems</p>
-								</header>
-								<a href="https://www.bbc.com/news/technology-54175359#:~:text=The%20back%2Dup%20driver%20of,Tempe%2C%20Arizona%2C%20in%202018." class="image main"><img src="images/UberAutonomous.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://www.bbc.com/news/technology-54175359#:~:text=The%20back%2Dup%20driver%20of,Tempe%2C%20Arizona%2C%20in%202018." class="button large">Full Story</a></li>
-								</ul>
-							</article>
 							</section>
 					</div>
 
