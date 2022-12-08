@@ -39,19 +39,58 @@
 						<!-- Unit 1 learnings -->
 							<section class="post">
 								<header class="major">
-									<span class="date">22 March 2022 ~ 28 March 2022</span>
-									<h2>Unit 4 learnings</h2>
+									<span class="date">14 November 2022 ~ 18 November 2022</span>
+									<h2>Unit 9 learnings</h2>
 								</header>
 							
 							<!-- Section 1 - Unit Learnings -->
-							<p>Hi  colleagues<p>
-							<p>Chapter 3 of (Bell, 2020) Introduced concepts used in statistics. We require an understanding of much of the data we employ in machine learning and an understanding of the statistical
-							components will prove helpful in providing background to the datasets inputted into AI systems. Typical considerations are Min and Max values, Mean, Mode, Range, and quartiles of the dataset have
-							been discussed.<br /><p>
+							<p>Convolutional neural networks<p>
+							<p>In unit 9, convultional neural networks for image recognition has been introduced. We have also begun our group assessment 2 using the CIFAR10 datset for image class prediction. In our 
+							assignment, the following areas have been empirically processed by the team members.<br /><p>
 
-							<p>Seminar 4 was also done in this week, Introducing and re-inforcing students knowledge on Unsupervised, Re-inforcement, Supervised, and -supervised learning. A case study on diease detection on leaves was discussed. Some algorithm types for this tasks were
-							interrogated, such as Naive Bayes, Ramdom Forests, and Support Vector Machines. We learned that no one model is best for every problem and data set, and much work in testing needs to first be done to find
-							the best tool for the task at hand.<p>
+							<p><h2>CIFAR10 dataset<h2><br/><br />
+							The CIFAR10 10 datset consits of 50000 training images which are labelled by class (Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck).
+							<span class="image left"><img src="images/CIFAR10_Ex.jpg" alt="" /></span>
+							<p><i> CIFAR10 example pictures, (Walczak &Cerpa, 2003)</i><p>
+							Each image in the dataset is 32*32 in RGB format. There is also a test set included of size 10000 images.
+							
+							<p>Training/Validation datset<br/><br />
+							Data for convolutional neural networks is typically split into three sets, training, validation and test (Yamashita. et al, 2018). The training set is used  by the neural network algorithm to 
+							calculate the loss values via forward propagation, with learning weights being updated via back propagation. The Validation set is used to evaluate the model during training to fine tune 
+							hyper-parameters, and provide an unbiased evaluation of model fit on the training dataset (Brownlee, 2017).
+							<span class="image fit"><img src="images/TrainValid_Split.jpg" alt="" /></span>
+							The above imade shows how we have split our data. The split is 40000 records in the training dataset, and 10000 into the validation set. In hindsight, we had omitted to randomise the data prior to the
+							split which would have been a good approach to ensuring the class balance in training and validation sets are randomly distributed.
+							
+							
+							<h2>Convolutional neural network architecture</h2>
+							<span class="image fit"><img src="images/CNNArchitecture.jpg" alt="" /></span>
+							<p><i> Architecture of a CNN, (Mishra, 2020)</i><p><br />
+							The above image shows the general layers included in a CNN. Many different architectures can be created, such as the simplistic model used in the example literature:<br />
+							<span class="image fit"><img src="images/AssignmentModel_Summary.jpg" alt="" /></span>
+							To the VGG16 model which won the Imagenet competition in 2014:
+							<span class="image fit"><img src="images/VGG16_modelsummary.jpg" alt="" /></span>
+							<p><i> Summary of the VGG16 model, (Thakur, 2019)</i><p><br />
+							
+							The below model is the one used for our second assessment, and is a large model comparatively. It has performed well in our testing using many models. This model contains 4,561,086 trainable
+							parameters. We have not tested data augmentation techniques. The best result was produced by using dropout at stages of our network. Possibly, a future improvement will be to add a degree 
+							of data augmentation as well, and re-assess the results.
+							<span class="image fit"><img src="images/TeamModel.jpg" alt="" /></span>
+							
+							The below image shows the loss curve:<br />
+							<span class="image fit"><img src="images/LossCurve.jpg" alt="" /></span>
+							From the loss curve, it is seen that both training and validation loss decrease but there is still a large gap between both. This model has likely overfit the training data at around over 
+							10 epochs. This is likely due to the size of our training dataset vs the size of the validation dataset, that is the training data has too few examples compared to the validation set, and does
+							not provide sufficient information to the model to learn.As mention above, data augmentation may also assit with this, along with ramdom sampling of both training and validation sets.<br />
+							
+							
+							The below graph shows the accuracy curves for the network:
+							<span class="image fit"><img src="images/AccuracyCurve.jpg" alt="" /></span>
+							From this we can also see overfitting occuring at approximately above 10 epochs. We would have desired a training curve whihc more closely follows the validation curve. Further testing with the above concepts
+							would be necessary for this network, but for the time we had at hand to experiment, we are happy with the model itself, and believe minor additons would give huge benefit.<br />
+							
+							We have used the Adam optimiser, which is a gradient descent optimisation algorithm. Adam realises the benefits of both the adaptive gradienbt algorithm, and root mean square propagation in that
+							it considers the average os the second moments of gradient (uncentred variance)(Brownlee, 2017).<br /><p>
 							</section>
 					</div>
 
