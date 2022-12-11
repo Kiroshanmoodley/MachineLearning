@@ -45,10 +45,10 @@
 							
 							<!-- Section 1 - Unit Learnings -->
 							<p><h2>Model Selecion</h2><p>
-							<p>Unit 11 has focussed on unit selection and learnings from various sectors using articial intelligence and the problems they have faced.<br />
+							<p>Unit 11 has focussed on unit selection and learnings from various sectors using articial intelligence and the problems they have faced.<br /><br />
 							
 							Model selection is the process of selecting one final machine learning model from a collection of competing machine models, trained on the same dataset. (Essex, 2022) states that all models have some 
-							predictive error given the noise in the data, the sampled data not having enough features, and areas where the model type excels, as well as limitations of each different model type.
+							predictive error given the noise in the data, the sampled data not having enough features, and areas where the different models excel, as well as limitations of each different model.
 							
 							<p><h2>Bias variance problem</h2><p><br />
 							Bias is the difference between the average prediction of a model, and the actual value the model is trying to predict (Singh, 2018). High bias can result in an algorithm failing to find relevant relationships
@@ -56,6 +56,8 @@
 							- More input data<br />
 							- Longer training duration<br />
 							- Increasing the number of parameters of the model<br /><br />
+							
+							In our assessment 2, we have not encountered underfitting on our model. The 50000 image training datset was split into 40000 training images and 10000 validation images.
 							
 							Variance is the variability of model prediction for a given data point. A model with high variance is fit too well to the training dataset(Singh, 2018), and does not generalise on data it has not seen before. 
 							Overfitting is the term use for datasets which exhibit high variability. Some of the steps for reducing an overfit model include:<br />
@@ -65,6 +67,10 @@
 							- Changeto the training process (such as loss function used)<br />
 							- Early termination<br />
 							- Regularization (Such as dropout or L1/L2 regularization)<br />
+
+							In our model in assessment 2 we have encountered overfitting of the moel. We used dropout at certain stages of the network to add non linearity to the model, which we found worked well to ensure overfitting
+							is minimal.<br />
+							
 							
 							The following graph depicts the fit of a model 
 							<span class="image fit"><img src="images/OverUnderFitting.jpg" alt="" /></span>
