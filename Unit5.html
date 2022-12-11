@@ -40,34 +40,80 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">05 April 2022 ~ 11 April 2022</span>
-									<h2>Unit 5 learnings</h2>
+									<h2>Unit 11 learnings</h2>
 								</header>
 							
 							<!-- Section 1 - Unit Learnings -->
-							<p>Hi  colleagues<p>
-							<p>Unit 5 tool a deep dive into a few popular AI algorithms:<br />
-							- Decision trees<br />
-							Some advantages of decision trees, as seen in (Bell, 2020) are ease of visualising the tree structure (which enhances the understanding of the decisions made), little need for data preparation, and little processing power required.
-							Very few disadvantages exist, though the algorithm can create very complex trees if the input data entered is complex.<br /><br />
-														
-							- Clustering<br />
-							The k-means algorithm works by assigning a random number of custer centroids (k), and then calculating the square of the Euclidean distance of each data point to the closest cluster centroid to form the clusters.
-							The algorithm re-iterates this operation, moving the cluster centroid until the sum of squares for each member of the cluster is the lowest. Clustering is an unsupervised method.<br /><br />
+							<p><h2>Model Selecion</h2><p>
+							<p>Unit 11 has focussed on unit selection and learnings from various sectors using articial intelligence and the problems they have faced.<br />
 							
-							- Association Rules<br />
-							Association rules learning (Bell, 2020) is an unsupervised machine learning method which tests for reliance of one element data on another element of data. Association rules work by calculating support, 
-							confidence, lift and conviction variables to find the relation of a element to the rest. Uses of association rules learning are primarily in customer shopping behavior, and which purchases are usually seen with others (Basket analysis).
-							Common algorithms include Apriori and FP-Growth.<br /><br />
+							Model selection is the process of selecting one final machine learning model from a collection of competing machine models, trained on the same dataset. (Essex, 2022) states that all models have some 
+							predictive error given the noise in the data, the sampled data not having enough features, and areas where the model type excels, as well as limitations of each different model type.
 							
-							- Support Vector Machines<br />
-							Support vector mahines are also another class of unsupervised learning algorithm. They are used for a variety of classification taaks, such as image recognition and pattern recognition (Bell, 2020). Support vestors use
-							hyperplanes to segment the data in a feature space (using the kernel method) into different classifications/groups. Uses are frequently in to medical field with image and pattern recognititon, but this algorithm is very robust and
-							is best for any image or pattern recognition task.<br /><br /><p>				
-														
-							<h2>Seminar 4</h2>
-							<p>Seminar 4 was also held in this week, Introducing and re-inforcing students knowledge on Unsupervised, Re-inforcement, Supervised, and -supervised learning. A case study on diease detection on leaves was discussed. Some algorithm types for this tasks were
-							interrogated, such as Naive Bayes, Ramdom Forests, and Support Vector Machines. We learned that no one model is best for every problem and data set, and much work in testing needs to first be done to find
-							the best tool for the task at hand<p>
+							<p><h2>Bias variance problem</h2><p><br />
+							Bias is the difference between the average prediction of a model, and the actual value the model is trying to predict (Singh, 2018). High bias can result in an algorithm failing to find relevant relationships
+							between the data and the target output (Essex, 2022). High bias can also be referred to as Underfitting. The following steps can be used to reduce Underfitting:<br />
+							- More input data<br />
+							- Longer training duration<br />
+							- Increasing the number of parameters of the model<br /><br />
+							
+							Variance is the variability of model prediction for a given data point. A model with high variance is fit too well to the training dataset(Singh, 2018), and does not generalise on data it has not seen before. 
+							Overfitting is the term use for datasets which exhibit high variability. Some of the steps for reducing an overfit model include:<br />
+							- Addition of more training data<br />
+							- Data Augmentation techniques (such as copping and rotating)<br />
+							- Simplification of the model<br />
+							- Changeto the training process (such as loss function used)<br />
+							- Early termination<br />
+							- Regularization (Such as dropout or L1/L2 regularization)<br />
+							
+							The following graph depicts the fit of a model 
+							<span class="image fit"><img src="images/OverUnderFitting.jpg" alt="" /></span>
+							<p><i> Diagram of different fit scenarios on medel, (University of Essex, 2022)</i><p>							
+							I have found the above graph very helpful to explain this concept. In the left most graph, an underfit (high bias) model is shown, and as can be seen, the model has not been able to learn all the
+							model data for accuracte predictions. the middle graph shows a very good fit to much of the input data. A model fit in such a manner (so as to have a fuction capable of producing a good split 
+							between class boundaries is optimal. In the rightmost graph, a depiction of an overfit model (hign variability) is shown. This model has been trained to learn the training dataset and its nuances, and will perform poorly on
+							new data.
+							
+							<p><h2>Model selection techniques</h2><p><br />
+							Probabilistic methods:<br />
+							- Akaike information criterion<br />
+							- Bayesian information criterion<br />
+							- Minimum description lenght<br />
+							- Structural risk minimization<br />
+							
+							Resampling methods:<br />
+							- Random train/validation splits<br />
+							- crpss validation (Eg, K-Fold)<br />
+							- Bootstrapping<br />
+							
+							
+							<p><h2>Sensitivity and specificity</h2><p><br />
+							Senitivity measures the total number of true positive evaluations over the number of true positive and false negative observations and is igven by the following formula:<br />
+							- (Number of true positives / Number of true positives + Number of false negatives)<br /><br />
+							
+							Specificity measures the total number of true negatives over the number of true negative and false positive observations, and is given by the following formula:<br />
+							- (Number of true negatives / number of true negatives + number of false positives)<br /><br />
+							
+							<span class="image fit"><img src="images/SensitivitySpecificity.jpg" alt="" /></span>
+							<p><i> Illustration of sensitivity vs specificity, (University of Essex, 2022)</i><p><br />
+							
+							Sensitivity is thus negatively correlatd to specificity, meaning that as the sensitivity increases, the specificity decreases and vice versa (Opthamol JI, 2008). The measure of sensitivtiy leads us into
+							two imporant concepts, first being error type. Namely, two error types exist, type 1 and type 2 errors. A type 1 error occurs when the true value of a sample is classified positive when it is not, for instance
+							when a person without cancer is predicted to have cancer. Type 2 errors occur when the sample is classified negative when the true value is not, for instance if a person who has cancer is classified as not
+							having cancer.<br /><br />
+							
+							The second concept is the Receiver operating characteristic (ROC) and area under curve (AUC), and is very important in model selection, as it gives us a good indication of model performance in how well the model
+							has learned from the training data.
+							<span class="image fit"><img src="images/ROCCurve.jpg" alt="" /></span>
+							<p><i> Illustration of ROC curve, (University of Essex, 2022)</i><p><br />
+							
+							The ROC curve takes the value of true positive rate vs false positive rate, looking at the area under the curve gives an indication of model performance. 
+							<span class="image fit"><img src="images/ROCselection.jpg" alt="" /></span>
+							<p><i> Illustration of effect of true positive rate and false positive rate on ROC curve, (University of Essex, 2022)</i><p><br />
+							
+							Moving from the left increases sensitivity (more true positives correcly identified), but also decrease specificity (more tru negatives correctly classified). AUC as the ratio of TPR and FPR provides
+							an understanding of where to set the threshold or cut-off point.<br /><p>
+							
 							</section>
 					</div>
 
