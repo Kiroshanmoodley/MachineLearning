@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unit 6</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Back to main</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/Kiroshanmoodley" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/kiroshan-moodley/" class="icon brands fa-linkedin"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Unit 1 learnings -->
+							<section class="post">
+								<header class="major">
+									<span class="date">12 April 2022 ~ 18 April 2022</span>
+									<h2>Unit 6 learnings</h2>
+								</header>
+							
+							<!-- Section 1 - Unit Learnings -->
+													
+							<h2>Assessment 1<br /><br /></h2>
+							<p>Assessment 1 has been done in a team with Mubarak dada and Trevor Ndlazi. The brief was to conduct an exploratory data analysis and an analytic report on Airbnb data in suburbs in the UK which was hosted in 
+							Kaggle. We used Jupyter notebook to prepare all of our analysis. This assessment activity took much effort and practise as I had not used Jupyter notebook before or coded in Python. In doing so,
+							I have learned much about exploratory data analysis and using various libraries for data visualisation. Some of the graphs I have created below:<br /><br />
+							
+							<span class="image fit"><img src="images/BoxPlot2.jpg" alt="" /></span>
+							<p><i> Boxplot of neighbourhood vs price (Moodley .et al, 2022)</i><p>
+							
+							The above graph is the boxplot created after removal of the outliers. In the beginning of the course, these were not intuitive to me, but after this assignment, I prefer to see graphs in this format
+							as it is easy to visualise the data, and note the min, max,25th, mean, and 75th percentile easily. It is also easy to see how much of the data are outliers.<br /><br />
+							
+							<span class="image fit"><img src="images/Scatterplot.jpg" alt="" /></span>
+							<p><i> Various scatterplots used for data analysis of Airbnb data (Moodley .et al, 2022)</i><p>
+							
+							The above scatterplot has been very useful in visualising the spread of data between two variables.<br /><br />
+							
+							<span class="image fit"><img src="images/MultiplePlots.jpg" alt="" /></span>
+							<p><i> Bargraph and Lineplot used for visualisation of neighbourhood data vs price (Moodley .et al, 2022)</i><p>
+							
+							The above graph is what I am most proud of and tells a great story for the entire dataset in a single graph. The bar charts show the revenue by neighbourhood, and the line plot shows the availability.
+							Revenue was calculated as the price * (365 - availability), and shows in a single graph how availability is related to revenue in all areas under consideration.<br />
+							
+							<span class="image fit"><img src="images/CorrPlot2.jpg" alt="" /></span>
+							<p><i> Correlation plot of data in Airbnb dataset (Moodley .et al, 2022)</i><p>
+							
+							The above graph shows the correlation plot we used to find similarities between variables in the data, with which we could use in our analysis. In this dataset, no large correlations were 
+							found between the pertinent variables in the dataset, but we have seen correlations between neighbourhood and availability (71%) and neighbourhood and room type code (19%).<br />
+							
+							<span class="image fit"><img src="images/Clusteranalysis.jpg" alt="" /></span>
+							<p><i> Code used for cluster algorithm for data in Airbnb dataset (Moodley .et al, 2022)</i><p>
+							
+							The above code has been used for the analysis we have done for assessment 1. For the K-Means algorithm, sum of squares is used to calculate the centroids, and thus numerical values are required.
+							We used the ordinal encoder to encode all of our categorical values before running them through the K-means clustering algorithm. We have selected 5 clusters as the optimum number of clusters for 
+							good spread of the clusters with the highest silhouette coefficient values:<br />
+							
+							<span class="image fit"><img src="images/K5Silhoutte.jpg" alt="" /></span>
+							<p><i> Silhouette curve for K=5 clusters (Moodley .et al, 2022)</i><p>
+							
+							This resulted in well defined clusters depicted below. The centroids are also shown in the diagram as the black points within the clusters.
+							<span class="image fit"><img src="images/Clusters_Centroids.jpg" alt="" /></span>
+							<p><i> Silhouette curve for K=5 clusters (Moodley .et al, 2022)</i><p>
+							
+							The assessment activity has taught me a wealth of knowlegde in real world programming and data visualisation. The versitality of tools such as seaborn, and matlibplot have been indispensible,
+							along with the rich graphics they can create, and easily produce graphs which have multiple variables embedded into them. Ordinal encoding was easy to perform using sklearn libraries. 
+							I have utilized Synthetic minority oversampling technique (SMOTE) in this assignment as certain neighbourhood groups were extremely imbalanced. SMOTE can generate random sample data points
+							using the input data synthetically (Wang .et al, 2021), and thus be used to balanced datasets for classification accuracy on minority classes. We used a version of SMOTE called SMOTENC
+							(Numerical/categorical) which is designed to handle a categorical variable as target, and took much effort to learn and use. Finally, I have learned a great deal on cleaning of the data and handling of it until it is ready
+							for the classifier.<br /><br />
+							
+							Working in a team environment for the first time has been a great experience. My team mates have been very knowledgable on the subject matter and we have put in many hours to ensure the model
+							is of a good standard. Further to this, we have also been able to assess the strenghts of each team member and leverage this. Such as myself heading the EDA, and Mubarak heading the clustering, with
+							Trevor brilliant at analysis and putting the content together ensuring it is seamless.<p>
+						
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Turnberry Office Park<br />
+								Bryanston</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">kiroshanmoodley@yahoo.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+								<li><a href="https://github.com/Kiroshanmoodley" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/kiroshan-moodley/" class="icon brands fa-linkedin"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

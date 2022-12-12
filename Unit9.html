@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unit 4</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Back to main</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/Kiroshanmoodley" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/kiroshan-moodley/" class="icon brands fa-linkedin"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Unit 1 learnings -->
+							<section class="post">
+								<header class="major">
+									<span class="date">14 November 2022 ~ 18 November 2022</span>
+									<h2>Unit 9 learnings</h2>
+								</header>
+							
+							<!-- Section 1 - Unit Learnings -->
+							<p>Convolutional neural networks<p>
+							<p>In unit 9, convultional neural networks for image recognition has been introduced. We have also begun our group assessment 2 using the CIFAR10 datset for image class prediction. In our 
+							assignment, the following areas have been empirically processed by the team members.<br /><p>
+
+							<p><h2>CIFAR10 dataset</h2><p><br/>
+							The CIFAR10 10 dataset consists of 50000 training images which are labelled by class (Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck).
+							<span class="image left"><img src="images/CIFAR10_Ex.jpg" alt="" /></span>
+							<p><i> CIFAR10 example pictures, (Walczak &Cerpa, 2003)</i><p>
+							Each image in the dataset is 32*32 in RGB format. There is also a test set included of size 10000 images.<br /><br /><br />
+							
+							<p><h2>Training/Validation datset</h2><br/>
+							Data for convolutional neural networks is typically split into three sets, training, validation and test (Yamashita. et al, 2018). The training set is used  by the neural network algorithm to 
+							calculate the loss values via forward propagation, with learning weights being updated via back propagation. The Validation set is used to evaluate the model during training to fine tune 
+							hyper-parameters, and provide an unbiased evaluation of model fit on the training dataset (Brownlee, 2017).
+							<span class="image fit"><img src="images/TrainValid_Split.jpg" alt="" /></span>
+							The above imade shows how we have split our data. The split is 40000 records in the training dataset, and 10000 into the validation set. In hindsight, we had omitted to randomise the data prior to the
+							split which would have been a good approach to ensuring the class balance in training and validation sets are randomly distributed.
+							
+							
+							<h2>Convolutional neural network architecture</h2>
+							<span class="image fit"><img src="images/CNNArchitecture.jpg" alt="" /></span>
+							<p><i> Architecture of a CNN, (Mishra, 2020)</i><p>
+							The above image shows the general layers included in a CNN. Many different architectures can be created, such as the simplistic model used in the example literature:<br />
+							<span class="image fit"><img src="images/AssignmentModel_Summary.jpg" alt="" /></span>
+							To the VGG16 model which won the Imagenet competition in 2014:
+							<span class="image fit"><img src="images/VGG16_modelsummary.jpg" alt="" /></span>
+							<p><i> Summary of the VGG16 model, (Thakur, 2019)</i><p>
+							
+							The below model is the one used for our second assessment, and is a large model comparatively. It has performed well in our testing using many models. This model contains 4,561,086 trainable
+							parameters. We have not tested data augmentation techniques. The best result was produced by using dropout at stages of our network. Possibly, a future improvement will be to add a degree 
+							of data augmentation as well, and re-assess the results.
+							<span class="image fit"><img src="images/TeamModel.jpg" alt="" /></span>
+							
+							The below image shows the loss curve:<br />
+							<span class="image fit"><img src="images/LossCurve.jpg" alt="" /></span>
+							From the loss curve, it is seen that both training and validation loss decrease but there is still a large gap between both. This model has likely overfit the training data at approximately over 
+							10 epochs. This is likely due to the size of our training dataset vs the size of the validation dataset, that is the training data has too few examples compared to the validation set, and does
+							not provide sufficient information to the model to learn. As mention above, data augmentation may also assit with this, along with ramdom sampling of both training and validation sets.<br /><br />
+							
+							
+							The below graph shows the accuracy curves for the network:
+							<span class="image fit"><img src="images/AccuracyCurve.jpg" alt="" /></span>
+							From this we can also see overfitting occuring at approximately above 10 epochs. We would have desired a training curve which more closely follows the validation curve. Further testing with the above concepts
+							would be necessary for this network, but for the time we had at hand to experiment, we are happy with the model itself, and believe minor additons would give huge benefit.<br /><br />
+							
+							We have used the Adam optimiser, which is a gradient descent optimisation algorithm. Adam realises the benefits of both the adaptive gradienbt algorithm, and root mean square propagation in that
+							it considers the average of the second moments of gradient (uncentred variance)(Brownlee, 2017).<br /><p>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Turnberry Office Park<br />
+								Bryanston</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">kiroshanmoodley@yahoo.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+								<li><a href="https://github.com/Kiroshanmoodley" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/kiroshan-moodley/" class="icon brands fa-linkedin"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

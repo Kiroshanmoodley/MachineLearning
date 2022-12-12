@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Unit 5</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Back to main</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/Kiroshanmoodley" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/kiroshan-moodley/" class="icon brands fa-linkedin"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Unit 1 learnings -->
+							<section class="post">
+								<header class="major">
+									<span class="date">28 November 2022 ~ 02 December 2022</span>
+									<h2>Unit 11 learnings</h2>
+								</header>
+							
+							<!-- Section 1 - Unit Learnings -->
+							<p><h2>Model Selecion</h2><p>
+							<p>Unit 11 has focussed on unit selection and learnings from various sectors using articial intelligence and the problems they have faced.<br /><br />
+							
+							Model selection is the process of selecting one final machine learning model from a collection of competing machine models, trained on the same dataset. (Essex, 2022) states that all models have some 
+							predictive error given the noise in the data, the sampled data not having enough features, and areas where the different models excel, as well as limitations of each different model.
+							
+							<p><h2>Bias variance problem</h2><p><br />
+							Bias is the difference between the average prediction of a model, and the actual value the model is trying to predict (Singh, 2018). High bias can result in an algorithm failing to find relevant relationships
+							between the data and the target output (Essex, 2022). High bias can also be referred to as Underfitting. The following steps can be used to reduce Underfitting:<br />
+							- More input data<br />
+							- Longer training duration<br />
+							- Increasing the number of parameters of the model<br /><br />
+							
+							In our assessment 2, we have not encountered underfitting on our model. The 50000 image training datset was split into 40000 training images and 10000 validation images.<br /><br />
+							
+							Variance is the variability of model prediction for a given data point. A model with high variance is fit too well to the training dataset (Singh, 2018), and does not generalise on data it has not seen before. 
+							Overfitting is the term used for datasets which exhibit high variability. Some of the steps for reducing an overfit model include:<br />
+							- Addition of more training data<br />
+							- Data Augmentation techniques (such as cropping and rotating)<br />
+							- Simplification of the model<br />
+							- Change to the training process (such as loss function used)<br />
+							- Early termination<br />
+							- Regularization (Such as dropout or L1/L2 regularization)<br /><br />
+
+							In our model built in assessment 2 we have encountered overfitting. We used dropout at certain stages of the network to add non linearity to the model, which we found worked well to ensure overfitting
+							is minimal.<br /><br />
+							
+							
+							The following graph depicts the fit of a model:
+							<span class="image fit"><img src="images/OverUnderFitting.jpg" alt="" /></span>
+							<p><i> Diagram of different fit scenarios on model, (University of Essex, 2022)</i><p>							
+							I have found the above graph very helpful to explain this concept. In the left most graph, an underfit (high bias) model is shown, and as can be seen, the model has not been able to learn all the
+							model data for accurate predictions. the middle graph shows a very good fit to much of the input data. A model fit in such a manner (so as to have a function capable of producing a good split 
+							between class boundaries) is optimal. In the rightmost graph, a depiction of an overfit model (high variability) is shown. This model has been trained to learn the training dataset and its nuances, and will perform poorly on
+							new data.
+							
+							<p><h2>Model selection techniques</h2><p><br />
+							Probabilistic methods:<br />
+							- Akaike information criterion<br />
+							- Bayesian information criterion<br />
+							- Minimum description lenght<br />
+							- Structural risk minimization<br /><br />
+							
+							Resampling methods:<br />
+							- Random train/validation splits<br />
+							- cross validation (Eg, K-Fold)<br />
+							- Bootstrapping<br />
+							
+							
+							<p><h2>Sensitivity and specificity</h2><p><br />
+							Sensitivity measures the total number of true positive evaluations over the number of true positive and false negative observations and is given by the following formula:<br />
+							- (Number of true positives / (Number of true positives + Number of false negatives))<br /><br />
+							
+							Specificity measures the total number of true negatives over the number of true negative and false positive observations, and is given by the following formula:<br />
+							- (Number of true negatives / (number of true negatives + number of false positives))<br /><br />
+							
+							<span class="image fit"><img src="images/SensitivitySpecificity.jpg" alt="" /></span>
+							<p><i> Illustration of sensitivity vs specificity, (University of Essex, 2022)</i><p><br />
+							
+							Sensitivity is thus negatively correlatd to specificity, meaning that as the sensitivity increases, the specificity decreases and vice versa (Opthamol J.I, 2008). The measure of sensitivtiy leads us into
+							two important concepts, first being error type. Namely, two error types exist, type 1 and type 2 errors. A type 1 error occurs when the true value of a sample is classified positive when it is not, for instance
+							when a person without cancer is predicted to have cancer. Type 2 errors occur when the sample is classified negative when the true value is not, for instance if a person who has cancer is classified as not
+							having cancer.<br /><br />
+							
+							The second concept is the Receiver operating characteristic (ROC) and area under curve (AUC), and is very important in model selection, as it gives us a good indication of model performance in how well the model
+							has learned from the training data.
+							<span class="image fit"><img src="images/ROCCurve.jpg" alt="" /></span>
+							<p><i> Illustration of ROC curve, (University of Essex, 2022)</i><p><br />
+							
+							The ROC curve takes the value of true positive rate vs false positive rate, looking at the area under the curve gives an indication of model performance. 
+							<span class="image fit"><img src="images/ROCselection.jpg" alt="" /></span>
+							<p><i> Illustration of effect of true positive rate and false positive rate on ROC curve, (University of Essex, 2022)</i><p><br />
+							
+							Moving from the left increases sensitivity (more true positives correcly identified), but also decreases specificity (more true negatives correctly classified). AUC as the ratio of TPR and FPR provides
+							an understanding of where to set the threshold or cut-off point.<br /><p>
+							
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Turnberry Office Park<br />
+								Bryanston</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">kiroshanmoodley@yahoo.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+								<li><a href="https://github.com/Kiroshanmoodley" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/kiroshan-moodley/" class="icon brands fa-linkedin"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
